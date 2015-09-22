@@ -1,3 +1,9 @@
 FROM fedora:22
 MAINTAINER Michael Clayton <mclayton@redhat.com>
-RUN dnf install -y git nodejs npm rubygem-compass rubygem-sass; dnf update -y; dnf clean all
+
+RUN dnf update -y
+RUN dnf install -y git nodejs npm ruby ruby-devel make
+RUN dnf clean all
+
+RUN gem update --system
+RUN gem install sass compass
