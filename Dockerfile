@@ -6,4 +6,4 @@ RUN dnf install -y git nodejs npm ruby ruby-devel make
 RUN dnf clean all
 
 RUN gem update --system
-RUN gem install sass compass
+RUN gem install sass compass bundler
