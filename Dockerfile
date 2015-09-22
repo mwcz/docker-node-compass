@@ -1,6 +1,8 @@
 FROM fedora:22
 MAINTAINER Michael Clayton <mclayton@redhat.com>
 
+ENV LANG en_US.utf8
+
 RUN dnf update -y
 RUN dnf install -y git nodejs npm ruby ruby-devel make
 RUN dnf clean all
