@@ -9,3 +9,5 @@ RUN dnf clean all
 
 RUN gem update --system
 RUN gem install sass compass breakpoint toolkit
+
+RUN npm install -g grunt-cli bower
