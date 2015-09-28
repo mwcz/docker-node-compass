@@ -8,6 +8,6 @@ RUN dnf install -y git nodejs npm ruby ruby-devel make
 RUN dnf clean all
 
 RUN gem update --system
-RUN gem install sass compass breakpoint toolkit
+RUN gem install sass compass breakpoint toolkit git-up
 
 RUN npm install -g grunt-cli bower
