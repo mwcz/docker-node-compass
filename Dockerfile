@@ -1,10 +1,11 @@
-FROM fedora:22
+FROM fedora:24
 MAINTAINER Michael Clayton <mclayton@redhat.com>
 
 ENV LANG en_US.utf8
 
 RUN dnf update -y
-RUN dnf install -y git nodejs npm ruby ruby-devel make
+RUN dnf groupinstall -y development-tools rpm-development-tools c-development 
+RUN dnf install -y git nodejs npm ruby ruby-devel
 RUN dnf clean all
 
 RUN gem update --system
