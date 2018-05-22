@@ -1,4 +1,4 @@
-FROM fedora:24
+FROM fedora:28
 MAINTAINER Michael Clayton <mclayton@redhat.com>
 
 ENV LANG en_US.utf8
