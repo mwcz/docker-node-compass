@@ -10,3 +10,7 @@ RUN dnf clean all
 # RUN gem update --system
 RUN gem install sass compass breakpoint toolkit
 RUN npm install -g grunt-cli bower
+
+RUN groupadd jenkins -g 1012
+RUN useradd -m jenkins -u 1003 -g 1012 -s /bin/bash
+USER jenkins
