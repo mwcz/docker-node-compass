@@ -11,6 +11,6 @@ RUN dnf clean all
 RUN gem install sass compass breakpoint toolkit
 RUN npm install -g grunt-cli bower
 
-RUN groupadd jenkins -g 1012
-RUN useradd -m jenkins -u 1003 -g 1012 -s /bin/bash
-USER jenkins
+COPY entrypoint.sh /bin/entrypoint.sh
+RUN chmod +x /bin/entrypoint.sh
+ENTRYPOINT ["/bin/entrypoint.sh"]
